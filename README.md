@@ -33,7 +33,12 @@ To build the Newlib cross-compiler, pick an install path (that is writeable). If
 ```
 export PATH="/opt/riscv:/opt/riscv/bin:$PATH"
 ```
-Then, simply run the following command from directory with sources:
+For first, cloning submodules using special script from directory with sources:
+```
+chmod +x cloning.sh
+./cloning.sh
+```
+Then, simply run the following command:
 ```
 ./configure --prefix=/opt/riscv
 sudo make -j<COUNT-OF-CPU-CORES>
