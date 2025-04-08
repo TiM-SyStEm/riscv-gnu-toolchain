@@ -6,7 +6,7 @@ It's fork of [riscv-gnu-toolchain](https://github.com/riscv-collab/riscv-gnu-too
 ## Getting the sources
 Cloning the repo using git.
 ```
-git clone https://github.com/riscv/riscv-gnu-toolchain
+git clone https://github.com/TiM-SyStEm/riscv-gnu-toolchain.git
 ```
 ## Requirements
 Several standard packages are needed to build the toolchain.\
