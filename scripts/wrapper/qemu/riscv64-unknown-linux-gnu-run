@@ -1,0 +1,17 @@
+#!/bin/bash
+
+qemu_args=()
+while [[ "$1" != "" ]]
+do
+    case "$1" in
+    -Wq,*) qemu_args+=("$(echo "$1" | cut -d, -f2-)");;
+    *) break;;
+    esac
+    shift
+done
+
+xlen="$(march-to-cpu-opt --elf-file-path $1 --print-xlen)"
+qemu_cpu="$(march-to-cpu-opt --elf-file-path $1 --print-qemu-cpu)"
+
+QEMU_CPU="${qemu_cpu}" qemu-riscv${xlen} -r 5.10 "${qemu_args[@]}" \
+  -L ${RISC_V_SYSROOT} "$@"
