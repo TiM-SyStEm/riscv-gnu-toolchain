@@ -31,7 +31,7 @@ mkdir bin
 ```
 To build the Newlib cross-compiler, pick an install path (that is writeable). If you choose, say, `/opt/riscv`, then add `/opt/riscv/bin` to your `PATH`. 
 ```
-export PATH="/opt/riscv:/opt/riscv/bin:$PATH"
+export PATH=/opt/riscv:/opt/riscv/bin:$PATH
 ```
 For first, cloning submodules using special script from directory with sources:
 ```
